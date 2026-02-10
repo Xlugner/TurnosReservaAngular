@@ -3,3 +3,10 @@ h1 {
     text-decoration-color: brown;
     
 }
+
+button {
+    padding: 5px;
+    margin: 5px 10px;
+    width: 75px;
+    border-radius: 5px;
+}
