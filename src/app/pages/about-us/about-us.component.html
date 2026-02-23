@@ -1,0 +1,116 @@
+<!-- Hero + Somos Offix (imagen a todo el ancho, texto superpuesto) -->
+<section class="relative w-full min-h-72 overflow-hidden">
+  <img
+    src="assets/images/about-hero.jpg"
+    alt=""
+    class="absolute inset-0 w-full h-full object-cover object-center"
+  />
+  <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/60 to-white/95"></div>
+  <div class="relative z-10 w-full h-full px-8 py-12 flex flex-col items-center">
+    <h2 class="text-3xl font-bold text-slate-700 mb-6 tracking-wide text-center w-full">Somos Offix</h2>
+    <p class="text-slate-700 leading-relaxed text-justify w-full md:w-1/2 ml-auto">
+      Una sociedad dedicada a ofrecer productos y servicios tecnológicos a la medida de tus necesidades.
+      Brindamos calidad y confianza desde 2018, de la mano de un competente equipo de trabajo. Estamos
+      prestos a recibir a nuestros clientes en Calle Martí No. 203 entre Figueredo y Lora, ciudad de Bayamo,
+      capital de la provincia de Granma. Para la solución que buscas, no dudes en acudir a nosotros, en
+      cualquier momento durante las horas de oficina, de lunes a sábado, entre las 9:00 A.M. y las 6:00 P.M.;
+      o si lo prefieres contáctanos por:
+      <span class="mx-1">•</span>
+      <a href="mailto:bussinesoffix@gmail.com" class="font-medium hover:text-blue-600 transition-colors">bussinesoffix&#64;gmail.com</a>
+      <span class="mx-1">•</span>
+      <a href="tel:+5323425039" class="font-medium hover:text-blue-600 transition-colors">(+53) 23 425039</a>
+      <span class="mx-1">•</span>
+      <a href="tel:+5350926652" class="font-medium hover:text-blue-600 transition-colors">(+53) 50926652</a>
+    </p>
+  </div>
+</section>
+
+<hr class="border-slate-200 max-w-3xl mx-auto" />
+
+<!-- Visión -->
+<section class="max-w-3xl mx-auto px-6 py-16 text-center" aria-labelledby="vision-title">
+  <h2 id="vision-title" class="text-3xl font-bold text-slate-700 mb-8 tracking-wide">Visión</h2>
+  <p class="text-slate-600 leading-relaxed text-justify">
+    Posicionar un sello de confianza y liderazgo en el mercado, ofreciendo en todo momento productos y
+    servicios de la mayor calidad, que garanticen las mejores experiencias a nuestros clientes, para ser
+    siempre Tu Primera Opción.
+  </p>
+</section>
+
+<hr class="border-slate-200 max-w-3xl mx-auto" />
+
+<!-- Destacamos -->
+<section class="max-w-3xl mx-auto px-6 py-16 text-center" aria-labelledby="destacamos-title">
+  <h2 id="destacamos-title" class="text-3xl font-bold text-slate-700 mb-8 tracking-wide">Destacamos</h2>
+  <p class="text-slate-600 leading-relaxed text-justify">
+    Offix marca la diferencia en Granma por ser un equipo profesional listo para brindarte servicios de
+    reparación de plotters e impresoras de inyección o chorro de tinta, siempre comprometidos con la
+    eficiencia y rapidez que mereces.
+  </p>
+</section>
+
+<hr class="border-slate-200 max-w-3xl mx-auto" />
+
+<!-- Preferimos -->
+<section class="max-w-3xl mx-auto px-6 py-16 text-center" aria-labelledby="preferimos-title">
+  <h2 id="preferimos-title" class="text-3xl font-bold text-slate-700 mb-8 tracking-wide">Preferimos</h2>
+  <p class="text-slate-600 leading-relaxed text-justify">
+    Construir relaciones duraderas con nuestros clientes, basadas en la transparencia, el respeto y la
+    excelencia en cada servicio que ofrecemos, porque tu satisfacción es nuestra mayor recompensa.
+  </p>
+</section>
+
+<hr class="border-slate-200 max-w-3xl mx-auto" />
+
+<!-- Conoce nuestro equipo -->
+<section class="py-16 text-center" aria-labelledby="team-title">
+  <h2 id="team-title" class="text-3xl font-bold text-slate-700 mb-4 tracking-wide">
+    Conoce nuestro equipo
+  </h2>
+  <p class="text-slate-500 mb-12">
+    ¿Te gustaría formar parte de nuestro equipo de trabajo?
+    <br />
+    <a routerLink="/contacto" class="text-blue-600 font-semibold hover:underline transition-colors">
+      Contáctanos
+    </a>
+    y consideraremos tus aptitudes.
+  </p>
+
+  <!-- Carrusel wrapper -->
+  <div class="relative overflow-hidden max-w-4xl mx-auto px-6">
+    <div
+      class="flex transition-transform duration-500 ease-in-out"
+      [style.transform]="'translateX(-' + currentSlide * 100 + '%)'">
+
+      @for (slide of slides; track $index) {
+        <div class="shrink-0 w-full grid grid-cols-3 gap-6 justify-items-center">
+          @for (member of slide; track member.name) {
+            <article class="flex flex-col items-center">
+              <img
+                [src]="member.photo"
+                [alt]="member.name"
+                class="w-40 h-52 object-cover object-top rounded mb-4 bg-slate-200"
+              />
+              <p class="font-semibold text-slate-700 text-sm">{{ member.name }}</p>
+              <p class="text-slate-500 text-sm">{{ member.role }}</p>
+            </article>
+          }
+        </div>
+      }
+
+    </div>
+  </div>
+
+  <!-- Puntos de navegación -->
+  <div class="flex justify-center gap-2 mt-8">
+    @for (slide of slides; track $index) {
+      <button
+        (click)="goToSlide($index)"
+        [class]="$index === currentSlide
+          ? 'w-3 h-3 rounded-full bg-slate-700 transition-colors'
+          : 'w-3 h-3 rounded-full bg-slate-300 hover:bg-slate-400 transition-colors'"
+        [attr.aria-label]="'Ir al slide ' + ($index + 1)">
+      </button>
+    }
+  </div>
+</section>
