@@ -15,7 +15,7 @@ interface TeamMember {
   imports: [RouterLink],
   templateUrl: './about-us.component.html',
 })
-export class AboutUsComponent {
+export class OldAboutUsComponent {
 
   // Agrupa los miembros en slides de 3
   readonly teamMembers: TeamMember[] = [

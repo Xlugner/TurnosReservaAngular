@@ -1,0 +1,56 @@
+<!-- Imagen de fondo a todo el ancho, card flotante a la derecha -->
+<section class="relative w-full min-h-screen overflow-hidden" aria-labelledby="hero-title">
+
+  <!-- Imagen de fondo -->
+  <img
+    src="assets/images/about-hero.jpg"
+    alt=""
+    class="absolute inset-0 w-full h-full object-cover object-center"
+  />
+
+  <!-- Overlay oscuro suave para legibilidad -->
+  <div class="absolute inset-0 bg-black/30"></div>
+
+  <!-- Card flotante a la derecha -->
+  <div class="relative z-10 w-full min-h-screen flex items-center justify-end px-8 py-20">
+    <div class="bg-white rounded-2xl shadow-2xl p-10 w-full max-w-xl">
+
+      <h1 id="hero-title" class="text-4xl font-extrabold text-slate-800 mb-3">Somos Offix</h1>
+      <ui-divider color="bg-red-600" />
+
+      <p class="text-slate-600 leading-relaxed mb-4">
+        Una sociedad dedicada a ofrecer productos y servicios tecnológicos a la medida de tus
+        necesidades. Brindamos calidad y confianza desde 2018, de la mano de un competente
+        equipo de trabajo.
+      </p>
+      <p class="text-slate-600 leading-relaxed mb-8">
+        Estamos prestos a recibir a nuestros clientes en Calle Martí No. 203 entre Figueredo y
+        Lora, ciudad de Bayamo, capital de la provincia de Granma. Para la solución que buscas,
+        no dudes en acudir a nosotros, de lunes a sábado entre las 9:00 A.M. y las 6:00 P.M.
+      </p>
+
+      <!-- Datos de contacto -->
+      <div class="flex flex-wrap items-center gap-x-4 gap-y-3 border-t border-slate-100 pt-6">
+        <about-contact-item
+          type="email"
+          value="bussinesoffix@gmail.com"
+          href="mailto:bussinesoffix@gmail.com" />
+
+        <span class="hidden sm:block text-slate-200">|</span>
+
+        <about-contact-item
+          type="phone"
+          value="(+53) 23 425039"
+          href="tel:+5323425039" />
+
+        <span class="hidden sm:block text-slate-200">|</span>
+
+        <about-contact-item
+          type="mobile"
+          value="(+53) 50926652"
+          href="tel:+5350926652" />
+      </div>
+
+    </div>
+  </div>
+</section>
