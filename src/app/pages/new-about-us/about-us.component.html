@@ -1,4 +1,108 @@
-<about-hero />
-<about-vision-destacamos />
-<about-preferimos />
-<about-ofertamos />
+<!-- Hero Section -->
+<section class="relative bg-cover bg-center py-24 lg:py-40" style="background-image: url('/assets/images/aboutus.jpg')" aria-labelledby="hero-title">
+  <!-- Overlay oscuro suave para legibilidad -->
+  <div class="absolute inset-0 bg-black/30"></div>
+
+  <!-- Card flotante a la derecha -->
+  <div class="container mx-auto px-4 relative z-10 flex justify-end">
+    <div class="max-w-2xl bg-white dark:bg-surface-dark p-8 md:p-12 shadow-none rounded-none">
+
+      <h1 id="hero-title" class="text-4xl md:text-5xl font-bold text-primary dark:text-white mb-6 border-b-4 border-secondary inline-block pb-2 font-display">Somos Offix</h1>
+
+      <p class="text-lg text-gray-800 dark:text-gray-200 leading-relaxed mb-6 font-body">
+        Una sociedad dedicada a ofrecer productos y servicios tecnológicos a la medida de tus
+        necesidades. Brindamos calidad y confianza desde 2018, de la mano de un competente
+        equipo de trabajo.
+      </p>
+      
+      <p class="text-base text-gray-700 dark:text-gray-300 leading-relaxed mb-8 font-body">
+        Estamos prestos a recibir a nuestros clientes en Calle Martí No. 203 entre Figueredo y
+        Lora, ciudad de Bayamo, capital de la provincia de Granma. Para la solución que buscas,
+        no dudes en acudir a nosotros, en cualquier momento durante las horas de oficina, de lunes a sábado entre las 9:00 A.M. y las 6:00 P.M.
+      </p>
+
+      <!-- Datos de contacto -->
+      <div class="mt-8 flex flex-wrap gap-4 text-sm font-medium text-primary dark:text-blue-300">
+        <span class="flex items-center bg-gray-50 dark:bg-black/30 px-3 py-1 rounded-none border border-gray-200 dark:border-gray-700">
+          <span class="material-symbols-outlined text-base mr-2">email</span> 
+          bussinesoffix@gmail.com
+        </span>
+        
+        <span class="flex items-center bg-gray-50 dark:bg-black/30 px-3 py-1 rounded-none border border-gray-200 dark:border-gray-700">
+          <span class="material-symbols-outlined text-base mr-2">phone</span> 
+          (+53) 23 425039
+        </span>
+        
+        <span class="flex items-center bg-gray-50 dark:bg-black/30 px-3 py-1 rounded-none border border-gray-200 dark:border-gray-700">
+          <span class="material-symbols-outlined text-base mr-2">smartphone</span> 
+          (+53) 50926652
+        </span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Vision y Destacamos -->
+<section class="py-16 md:py-24 bg-background-light dark:bg-background-dark">
+  <div class="container mx-auto px-4">
+    <div class="grid md:grid-cols-2 gap-12 items-stretch">
+      <ui-card [data]="getVisionCard('eye', 'Visión', 'Posicionar un sello de confianza y liderazgo en el mercado, ofreciendo en todo momento productos y servicios de la mayor calidad, que garanticen las mejores experiencias a nuestros clientes, para ser siempre Tu Primera Opción.', 'bg-accent/10', 'text-accent')" />
+      
+      <ui-card [data]="getVisionCard('badge', 'Destacamos', 'Offix marca la diferencia en Granma por ser un equipo profesional listo para brindarte servicios de reparación de plotters e impresoras de inyección o chorro de tinta, siempre comprometidos con la eficiencia y rapidez que mereces.', 'bg-secondary/10', 'text-secondary')" />
+    </div>
+  </div>
+</section>
+
+<!-- Preferimos -->
+<section class="py-16 bg-gray-50 dark:bg-gray-900">
+  <div class="container mx-auto px-4">
+    <div class="flex flex-col md:flex-row items-center gap-12">
+
+      <!-- Ilustración -->
+      <div class="md:w-1/2">
+        <img
+          src="assets/images/Preferimos.png"
+          alt="Equipo Offix conversando"
+          class="rounded-lg shadow-md w-full object-cover h-80"
+        />
+      </div>
+
+      <!-- Texto -->
+      <div class="md:w-1/2 space-y-6">
+        <h2 id="preferimos-title" class="text-3xl md:text-4xl font-bold text-primary dark:text-white font-display">Preferimos</h2>
+        <div class="h-1 w-20 bg-primary dark:bg-blue-500 rounded-full"></div>
+        
+        <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed font-body">
+          Nuestra sociedad prefiere construir relaciones duraderas con clientes conocedores y de
+          buen gusto, capaces de distinguir las mejores tecnologías e interesados en recibir
+          servicios de alto estándar.
+        </p>
+        
+        <div class="flex items-center space-x-4 text-accent dark:text-teal-400 font-medium cursor-pointer group font-body hover:text-primary dark:hover:text-blue-400 transition-colors"
+             routerLink="/equipo">
+          <span>Conoce a nuestro equipo</span>
+          <span class="material-symbols-outlined transform group-hover:translate-x-1 transition-transform">arrow_forward</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Ofertamos -->
+<section class="py-20 bg-background-light dark:bg-background-dark">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-16">
+      <h2 id="ofertamos-title" class="text-4xl font-bold text-primary dark:text-white mb-4 font-display">Ofertamos</h2>
+      <p class="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto font-body">Soluciones integrales para tu negocio y hogar.</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      @for (service of services; track service.title) {
+        <ui-card [data]="getServiceCard(service)" />
+      }
+    </div>
+
+  </div>
+</section>

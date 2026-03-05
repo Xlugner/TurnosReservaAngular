@@ -18,8 +18,12 @@ export const routes: Routes = [
         component: AboutUsComponent
     },
     {
+        path:'equipo',
+        // TODO: Crear EquipoComponent cuando estés listo
+        component: CounterComponent// Temporal: redirige a about-us
+    },
+    {
         path:'contact-us',
         component: ContactUsComponent
     }
-
 ];

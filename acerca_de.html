@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Acerca de Offix - Modernized</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#0A1135", // Navy Blue from header
+                        secondary: "#D32F2F", // Red accent from logo
+                        accent: "#008080", // Teal implied from description
+                        "background-light": "#F8FAFC",
+                        "background-dark": "#121212",
+                        "surface-light": "#FFFFFF",
+                        "surface-dark": "#1E1E1E",
+                        "text-light": "#333333",
+                        "text-dark": "#E0E0E0",
+                    },
+                    fontFamily: {
+                        display: ["Roboto", "sans-serif"],
+                        body: ["Roboto", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.25rem", // Subtler border radius globally
+                        'xl': "0.5rem",
+                        '2xl': "0.75rem",
+                    },
+                    boxShadow: {
+                        'subtle': '0 1px 2px 0 rgba(0, 0, 0, 0.05)',
+                        'flat': '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1)',
+                    }
+                },
+            },
+        };
+    </script>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+        }
+        .dark .glass-card {
+            background: rgba(30, 30, 30, 0.85);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .material-icons {
+            font-family: 'Material Symbols Outlined';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            -webkit-font-feature-settings: 'liga';
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark font-body transition-colors duration-200">
+<div class="bg-gray-100 dark:bg-gray-800 text-xs py-2 px-4 border-b border-gray-200 dark:border-gray-700">
+<div class="container mx-auto flex justify-between items-center">
+<span class="text-gray-600 dark:text-gray-400 hidden sm:inline">Soluciones Tecnológicas al Alcance de un Click</span>
+<div class="flex items-center space-x-6 ml-auto">
+<div class="flex items-center cursor-pointer text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-white">
+<span>USD</span>
+<span class="material-symbols-outlined text-sm ml-1">expand_more</span>
+</div>
+<a class="flex items-center text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-white" href="mailto:bussinesoffix@gmail.com">
+<span class="material-symbols-outlined text-sm mr-1">email</span>
+                bussinesoffix@gmail.com
+            </a>
+</div>
+</div>
+</div>
+<header class="bg-surface-light dark:bg-surface-dark py-4 shadow-sm">
+<div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
+<a class="flex items-center shrink-0" href="#">
+<div class="flex items-center">
+<span class="text-4xl font-black text-primary dark:text-white tracking-tighter" style="font-family: Arial, sans-serif;">OFF</span>
+<span class="text-4xl font-black text-secondary tracking-tighter" style="font-family: Arial, sans-serif;">IX</span>
+<span class="text-[0.6rem] self-end mb-1 ml-0.5 font-bold text-gray-500">S.U.R.L.®</span>
+</div>
+</a>
+<div class="w-full max-w-2xl relative">
+<input class="w-full border border-gray-300 dark:border-gray-600 rounded-full py-2.5 px-5 pr-10 focus:outline-none focus:ring-2 focus:ring-primary dark:bg-gray-800 dark:text-white transition-shadow" placeholder="Buscar productos..." type="text"/>
+<button class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-primary dark:hover:text-white">
+<span class="material-symbols-outlined">search</span>
+</button>
+</div>
+<div class="text-right hidden lg:block shrink-0">
+<div class="text-xs text-gray-500 dark:text-gray-400">Atención al cliente</div>
+<div class="font-bold text-lg text-primary dark:text-white">(+53) 23-425039</div>
+</div>
+</div>
+</header>
+<nav class="bg-primary text-white">
+<div class="container mx-auto px-4">
+<div class="flex items-center justify-between h-12">
+<div class="flex items-center space-x-6 overflow-x-auto no-scrollbar">
+<button class="lg:hidden text-white"><span class="material-symbols-outlined">menu</span></button>
+<a class="hover:text-gray-300 font-medium whitespace-nowrap" href="#">Inicio</a>
+<a class="hover:text-gray-300 font-medium whitespace-nowrap" href="#">Tienda</a>
+<a class="hover:text-gray-300 font-medium whitespace-nowrap" href="#">Servicios</a>
+<a class="hover:text-gray-300 font-medium whitespace-nowrap" href="#">Reset &amp; Firmwares</a>
+<a class="hover:text-gray-300 font-medium whitespace-nowrap" href="#">Documentos</a>
+<a class="hover:text-gray-300 font-medium whitespace-nowrap" href="#">Contáctenos</a>
+<a class="text-white font-bold whitespace-nowrap border-b-2 border-white pb-0.5" href="#">Acerca de Offix</a>
+</div>
+<div class="flex items-center space-x-4 ml-4 shrink-0">
+<a class="hover:text-gray-300" href="#"><span class="material-symbols-outlined">shopping_cart</span></a>
+<div class="flex items-center cursor-pointer hover:text-gray-300">
+<span class="hidden md:inline text-sm mr-1">jleyvaregalon@gmail.com</span>
+<span class="material-symbols-outlined">expand_more</span>
+</div>
+</div>
+</div>
+</div>
+</nav>
+<div class="bg-gray-100 dark:bg-gray-800 py-2">
+<div class="container mx-auto px-4 text-sm text-gray-500 dark:text-gray-400">
+<a class="hover:underline" href="#">Inicio</a> <span class="mx-2">/</span> <span class="text-gray-800 dark:text-gray-200">Sobre nosotros</span>
+</div>
+</div>
+<section class="relative bg-cover bg-center py-24 lg:py-40" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA4MtjcobTjZhqxJU8HYzgpcimOH7YuhE5z8J7KkZc3Shr9ecuej5wjmVIHVFmhR0F28C84UAANnrEU3eGcK6G_LLIzjyGepgiEgebCGxa2Ru-xFx5IyvUMQO_p_GED55vAKPE4HY95z2ewzv8TI0DkrNvjzl8aAjHi9K2--W4LJHb3-tR6vL2KupemdkdIVfrXwxLqSs60F_89uuX5O9d1eNRRYW2xVtbxdSVOu5S3vezdt4RDGn2tp4PbJss3zy3MmKhoRjsCVztl');">
+<div class="container mx-auto px-4 relative z-10 flex justify-end">
+<div class="max-w-2xl bg-white dark:bg-surface-dark p-8 md:p-12 shadow-none rounded-none">
+<h1 class="text-4xl md:text-5xl font-bold text-primary dark:text-white mb-6 border-b-4 border-secondary inline-block pb-2">Somos Offix</h1>
+<p class="text-lg text-gray-800 dark:text-gray-200 leading-relaxed mb-6">
+                Una sociedad dedicada a ofrecer productos y servicios tecnológicos a la medida de tus necesidades. Brindamos calidad y confianza desde 2018, de la mano de un competente equipo de trabajo.
+            </p>
+<p class="text-base text-gray-700 dark:text-gray-300 leading-relaxed">
+                Estamos prestos a recibir a nuestros clientes en Calle Martí No. 203 entre Figueredo y Lora, ciudad de Bayamo, capital de la provincia de Granma. Para la solución que buscas, no dudes en acudir a nosotros, en cualquier momento durante las horas de oficina, de lunes a sábado, entre las 9:00 A.M. y las 6:00 P.M.
+            </p>
+<div class="mt-8 flex flex-wrap gap-4 text-sm font-medium text-primary dark:text-blue-300">
+<span class="flex items-center bg-gray-50 dark:bg-black/30 px-3 py-1 rounded-none border border-gray-200 dark:border-gray-700"><span class="material-symbols-outlined text-base mr-2">email</span> bussinesoffix@gmail.com</span>
+<span class="flex items-center bg-gray-50 dark:bg-black/30 px-3 py-1 rounded-none border border-gray-200 dark:border-gray-700"><span class="material-symbols-outlined text-base mr-2">phone</span> (+53) 23 425039</span>
+<span class="flex items-center bg-gray-50 dark:bg-black/30 px-3 py-1 rounded-none border border-gray-200 dark:border-gray-700"><span class="material-symbols-outlined text-base mr-2">smartphone</span> (+53) 50926652</span>
+</div>
+</div>
+</div>
+</section>
+<section class="py-16 md:py-24 bg-background-light dark:bg-background-dark">
+<div class="container mx-auto px-4">
+<div class="grid md:grid-cols-2 gap-12 items-stretch">
+<div class="bg-surface-light dark:bg-surface-dark p-8 rounded-sm shadow-subtle border border-gray-100 dark:border-gray-700 hover:shadow-sm transition-shadow duration-300">
+<div class="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-4xl text-accent">visibility</span>
+</div>
+<h2 class="text-3xl font-bold text-primary dark:text-white mb-4">Visión</h2>
+<p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+                    Posicionar un sello de confianza y liderazgo en el mercado, ofreciendo en todo momento productos y servicios de la mayor calidad, que garanticen las mejores experiencias a nuestros clientes, para ser siempre Tu Primera Opción.
+                </p>
+</div>
+<div class="bg-surface-light dark:bg-surface-dark p-8 rounded-sm shadow-subtle border border-gray-100 dark:border-gray-700 hover:shadow-sm transition-shadow duration-300">
+<div class="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-4xl text-secondary">verified</span>
+</div>
+<h2 class="text-3xl font-bold text-primary dark:text-white mb-4">Destacamos</h2>
+<p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+                    Offix marca la diferencia en Granma por ser un equipo profesional listo para brindarte servicios de reparación de plotters e impresoras de inyección o chorro de tinta, siempre comprometidos con la eficiencia y rapidez que mereces.
+                </p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-16 bg-gray-50 dark:bg-gray-900">
+<div class="container mx-auto px-4">
+<div class="flex flex-col md:flex-row items-center gap-12">
+<div class="md:w-1/2">
+<img alt="Team meeting discussion" class="rounded-lg shadow-md w-full object-cover h-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLtCL1E6R0Ncy0bYcOWXFeVsyRvuiVKk4HVuZq0DGd4WiUezQkMGTfa_Wu4CoCVB4kRtV0vD2c7PzjPFpJhsAWtxprKMTSwJ7FdBI8TQC7DbyNLuy8MMF-D4jCBjgBhZJ4pVeeFlvlGEOCQW6756ZP_yv_0XaKRZ-OoE8C3FwkCW4C-_PP5MxIKt-TPsdcqpI34vEhi3B-de9Rru1ZVP16RVpCojg5XV_7JB0vLyYSj5aaG_ysiAo0E5MGwfDj3lSWN9FplgjAup0U"/>
+</div>
+<div class="md:w-1/2 space-y-6">
+<h2 class="text-3xl md:text-4xl font-bold text-primary dark:text-white">Preferimos</h2>
+<div class="h-1 w-20 bg-primary dark:bg-blue-500 rounded-full"></div>
+<p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                    Nuestra sociedad prefiere construir relaciones duraderas con clientes conocedores y de buen gusto, capaces de distinguir las mejores tecnologías e interesados en recibir servicios de alto estándar.
+                </p>
+<div class="flex items-center space-x-4 text-accent dark:text-teal-400 font-medium cursor-pointer group">
+<span>Conoce a nuestro equipo</span>
+<span class="material-symbols-outlined transform group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 bg-background-light dark:bg-background-dark">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-4xl font-bold text-primary dark:text-white mb-4">Ofertamos</h2>
+<p class="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">Soluciones integrales para tu negocio y hogar.</p>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="group bg-surface-light dark:bg-surface-dark p-6 rounded-sm shadow-subtle border border-gray-100 hover:border-gray-200 dark:border-gray-800 dark:hover:border-gray-700 hover:shadow-sm transition-all duration-300">
+<div class="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-md flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-white transition-colors duration-300 text-primary dark:text-blue-200">
+<span class="material-symbols-outlined">security</span>
+</div>
+<h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3">Garantía y Seguridad</h3>
+<p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                    Offix te garantiza rapidez y seguridad en la Instalación, el Mantenimiento y Reparación de ordenadores y equipos periféricos.
+                </p>
+</div>
+<div class="group bg-surface-light dark:bg-surface-dark p-6 rounded-sm shadow-subtle border border-gray-100 hover:border-gray-200 dark:border-gray-800 dark:hover:border-gray-700 hover:shadow-sm transition-all duration-300">
+<div class="w-12 h-12 bg-teal-100 dark:bg-teal-900 rounded-md flex items-center justify-center mb-4 group-hover:bg-accent group-hover:text-white transition-colors duration-300 text-accent dark:text-teal-200">
+<span class="material-symbols-outlined">print</span>
+</div>
+<h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3">Reparación de Equipos</h3>
+<p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                    Máquinas registradoras, fotocopiadoras y Plotter. También reparamos tus equipos de comunicaciones con la mayor comodidad.
+                </p>
+</div>
+<div class="group bg-surface-light dark:bg-surface-dark p-6 rounded-sm shadow-subtle border border-gray-100 hover:border-gray-200 dark:border-gray-800 dark:hover:border-gray-700 hover:shadow-sm transition-all duration-300">
+<div class="w-12 h-12 bg-indigo-100 dark:bg-indigo-900 rounded-md flex items-center justify-center mb-4 group-hover:bg-indigo-600 group-hover:text-white transition-colors duration-300 text-indigo-600 dark:text-indigo-200">
+<span class="material-symbols-outlined">shopping_bag</span>
+</div>
+<h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3">Ventas a Distancia</h3>
+<p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                    Te ofrecemos mayor comodidad a través de Ventas por correo electrónico e internet.
+                </p>
+</div>
+<div class="group bg-surface-light dark:bg-surface-dark p-6 rounded-sm shadow-subtle border border-gray-100 hover:border-gray-200 dark:border-gray-800 dark:hover:border-gray-700 hover:shadow-sm transition-all duration-300">
+<div class="w-12 h-12 bg-orange-100 dark:bg-orange-900 rounded-md flex items-center justify-center mb-4 group-hover:bg-orange-600 group-hover:text-white transition-colors duration-300 text-orange-600 dark:text-orange-200">
+<span class="material-symbols-outlined">storefront</span>
+</div>
+<h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3">Comercialización</h3>
+<p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                    Para conectarte con tus metas comercializamos programas informáticos, ordenadores, equipos periféricos y de telecomunicaciones.
+                </p>
+</div>
+<div class="group bg-surface-light dark:bg-surface-dark p-6 rounded-sm shadow-subtle border border-gray-100 hover:border-gray-200 dark:border-gray-800 dark:hover:border-gray-700 hover:shadow-sm transition-all duration-300">
+<div class="w-12 h-12 bg-pink-100 dark:bg-pink-900 rounded-md flex items-center justify-center mb-4 group-hover:bg-pink-600 group-hover:text-white transition-colors duration-300 text-pink-600 dark:text-pink-200">
+<span class="material-symbols-outlined">build</span>
+</div>
+<h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3">Piezas y Accesorios</h3>
+<p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                    Además de sus partes, piezas y accesorios para asegurar el funcionamiento óptimo de tus equipos.
+                </p>
+</div>
+<div class="group bg-surface-light dark:bg-surface-dark p-6 rounded-sm shadow-subtle border border-gray-100 hover:border-gray-200 dark:border-gray-800 dark:hover:border-gray-700 hover:shadow-sm transition-all duration-300">
+<div class="w-12 h-12 bg-green-100 dark:bg-green-900 rounded-md flex items-center justify-center mb-4 group-hover:bg-green-600 group-hover:text-white transition-colors duration-300 text-green-600 dark:text-green-200">
+<span class="material-symbols-outlined">lightbulb</span>
+</div>
+<h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3">Consultoría de Proyectos</h3>
+<p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                    Si lo que necesitas es ayuda para un proyecto inmediato, cuenta con nuestro equipo experto para asesorarte.
+                </p>
+</div>
+</div>
+</div>
+</section>
+<footer class="bg-surface-light dark:bg-surface-dark border-t border-gray-200 dark:border-gray-700 py-8">
+<div class="container mx-auto px-4 text-center text-gray-500 dark:text-gray-400 text-sm">
+        © 2023 Offix S.U.R.L. Todos los derechos reservados.
+    </div>
+</footer>
+
+</body></html>

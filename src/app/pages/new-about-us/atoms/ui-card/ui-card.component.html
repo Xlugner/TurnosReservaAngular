@@ -1,0 +1,40 @@
+<article [ngClass]="cardClasses" class="block h-full font-body group">
+  @if (data.icon) {
+    <div 
+      class="rounded-full flex items-center justify-center mb-6 transition-all duration-300"
+      [ngClass]="iconClasses">
+      <span 
+        class="material-symbols-outlined transition-all duration-300"
+        [ngClass]="{
+          'text-4xl': data.icon.size === 'lg',
+          'text-2xl': data.icon.size === 'md',
+          'text-xl': data.icon.size === 'sm',
+          'group-hover:text-white': data.variant === 'service'
+        }">
+        {{ data.icon.name }}
+      </span>
+    </div>
+  }
+
+  @if (data.title) {
+    <h3 class="font-bold text-gray-800 dark:text-white mb-4 font-display transition-all duration-300" 
+        [ngClass]="{
+          'text-3xl': data.variant === 'vision' || data.variant === 'featured',
+          'text-xl': data.variant === 'service' || data.variant === 'default',
+          'group-hover:text-primary': data.variant === 'service'
+        }">
+      {{ data.title }}
+    </h3>
+  }
+
+  @if (data.description) {
+    <p class="leading-relaxed font-body"
+       [ngClass]="{
+         'text-gray-600 dark:text-gray-300': data.variant === 'vision' || data.variant === 'featured',
+         'text-gray-600 dark:text-gray-400 text-sm': data.variant === 'service',
+         'text-slate-500 text-sm': data.variant === 'default'
+       }">
+      {{ data.description }}
+    </p>
+  }
+</article>
